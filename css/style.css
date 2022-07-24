@@ -74,9 +74,6 @@ nav{
     text-decoration: none;
 }
 
-span{
-    color: #2196F3;
-}
 /*header*/
 .header-menu{
 list-style: none;
@@ -253,10 +250,10 @@ li > .link-active, .link:hover, .header-menu a:focus{
     transition: all 0.3s ease;
 }
 
-.banner button:hover,  .subscription button:hover {
+.banner button:hover,  .subscription button:hover, .form .button:hover {
     transform: scale(1.05)
 }
-.banner button:active, .subscription button:active {
+.banner button:active, .subscription button:active, .form .button:active  {
     transform:scale(0.95)
 }
 
@@ -728,7 +725,7 @@ a {
     margin-bottom: 20px;
 }
 
-.logo > span {
+.span {
     color: var(--accent-color);
 }
 
@@ -896,7 +893,7 @@ color: var(--accent-color);
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
-    color: var(--text-color);
+    color: var(--main-color);
     position: relative;
 }
 
@@ -909,6 +906,17 @@ color: var(--accent-color);
     font-size: 14px;
     outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__field textarea {
+    margin-top: 4px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 11px 16px;
+    font-size: 14px;
+    resize: none;
 }
 
 .form__icon {
@@ -927,7 +935,7 @@ color: var(--accent-color);
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: var(--text-color);
+    color: var(--main-color);
     margin-bottom: 30px;
 }
 
@@ -950,9 +958,17 @@ color: var(--accent-color);
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 1.7px solid var(--title-color);
+    border: 1.7px solid var(--header-color);
     border-radius: 2px;
     margin-right: 7px;
+}
+
+.form__checkbox--checkbox:checked + .form__checkbox--icon {
+    border-color: transparent;
+    background-color: var(--accent-color);
+    background-image: url(../images/icons.svg#icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
 }
 
 .form__checkbox--text {
@@ -961,9 +977,19 @@ color: var(--accent-color);
 
 .form__checkbox--text-link {
     color: var(--accent-color);
+    text-decoration: underline;
 }
 
 .form .button {
     display: block;
     margin: 0 auto;
+}
+
+.form__input:focus, .form__field:focus .form__icon, .form__field:focus-within .input__icon {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+}
+
+.form__input:focus ~ .form__icon {
+    fill: var(--accent-color);
 }

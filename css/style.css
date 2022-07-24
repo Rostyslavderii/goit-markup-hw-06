@@ -107,7 +107,7 @@ ol, ul {
 
 /* header-links */
 
-.header__link-marker, .hedaer__link {
+.header__link-marker, .header__link {
     position: relative;
     padding-bottom: 25px;
     font-weight: 500;

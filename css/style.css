@@ -886,7 +886,7 @@ color: var(--accent-color);
     
 }
 
-.button-icon, .header__icon, .spacial__icon{
+.button-icon, .header__icon, .spacial__icon, .subscription__icon{
     margin-left: 10px;
 }
 

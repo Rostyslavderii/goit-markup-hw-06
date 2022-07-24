@@ -107,7 +107,7 @@ ol, ul {
 
 /* header-links */
 
-.header__link-active--marker, .hedaer__link {
+.header__link-marker, .hedaer__link {
     position: relative;
     padding-bottom: 25px;
     font-weight: 500;
@@ -125,13 +125,17 @@ li > .header__link-active, .header__link:hover, .header__menu a:focus{
    
 }
 
-.header__link-active.header__link-active--marker::after, .header__link:hover::after, .-header__link:focus::after {
-    transform: scale(1);
+.header__link-active.header__link-marker::after {
+    transform: scaleX(1);
+}
+
+.header__link:focus::after, .header__link:hover::after {
+    transform: scaleX(1);
 }
 
 
 
-.hedaer__link-active::after, .header__link::after {
+.header__link-active::after, .header__link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -795,7 +799,7 @@ color: var(--accent-color);
     align-self: center;
 }
 
-.header__contacts .header__icon, .spacial__icon, .network__icon {
+.header__contacts .header__icon, .spacial__icon {
  margin-right: 10px;
 }
 
@@ -882,7 +886,7 @@ color: var(--accent-color);
     
 }
 
-.button-icon .header__icon, .spacial__icon, .network__icon{
+.button-icon .header__icon, .spacial__icon{
     margin-left: 10px;
 }
 

@@ -967,7 +967,7 @@ color: var(--accent-color);
 .form__checkbox--checkbox:checked + .form__checkbox--icon {
     border-color: transparent;
     background-color: var(--accent-color);
-    background-image: url(../images/icons.svg#icon-check);
+    background-image: url(../images/icon_checked.svg);
     background-size: contain;
     background-origin: border-box;
 }

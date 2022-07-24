@@ -65,7 +65,7 @@ nav{
 }
 
 /*logo*/
-.header-logo{
+.header__logo{
     font-family: var(--secondary-font-family);
     font-size: 26px;
     font-weight: 700;
@@ -75,7 +75,7 @@ nav{
 }
 
 /*header*/
-.header-menu{
+.header__menu{
 list-style: none;
 display: flex;
 margin-left: 93px;
@@ -85,16 +85,16 @@ font-size: 14px;
 }
 
 /*header-menu*/
-.header-menu li{
+.header__menu li{
     margin-right: 50px;
     
 }
 
-.header-menu li:last-child, .header-contacts li:last-child {
+.header__menu li:last-child, .header__contacts li:last-child {
     margin-right: 0px;
 }
 
-.header-menu a {
+.header__menu a {
     color: var(--header-color);
     text-decoration: none;
     padding: 25px 0px;
@@ -107,7 +107,7 @@ ol, ul {
 
 /* header-links */
 
-.link-active--marker, .link {
+.header__link-active--marker, .hedaer__link {
     position: relative;
     padding-bottom: 25px;
     font-weight: 500;
@@ -118,20 +118,20 @@ ol, ul {
 }
 
 
-li > .link-active, .link:hover, .header-menu a:focus{
+li > .header__link-active, .header__link:hover, .header__menu a:focus{
     
     
     color: var(--accent-color);
    
 }
 
-.link-active.link-active--marker::after, .link:hover::after, .link:focus::after {
+.header__link-active.header__link-active--marker::after, .header__link:hover::after, .-header__link:focus::after {
     transform: scale(1);
 }
 
 
 
-.link-active::after, .link::after {
+.hedaer__link-active::after, .header__link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -150,7 +150,7 @@ li > .link-active, .link:hover, .header-menu a:focus{
 
 
 /*header-contacts*/
-.header-contacts {
+.header__contacts {
     list-style: none;
     display: flex;
     font-weight: 500;
@@ -158,34 +158,34 @@ li > .link-active, .link:hover, .header-menu a:focus{
 
 }
 
-.header-contacts li{
+.header__contacts li{
     margin-right: 50px;
 
 }
 
 
-.header-menu a:hover {
+.header__menu a:hover {
     color: #2196F3;
 }
 
-.header-menu li {
+.header__menu li {
     position: relative;
     height: 100%;
     width: 100%;
 }
 
 
-.header-email-contact, .header-phone {
+.header__email-contact, .header__phone {
     text-decoration: none;
     color: var(--main-color);
 }
 
-.header-contacts a:hover, .header-contacts a:focus {
+.header__contacts a:hover, .header__contacts a:focus {
     text-decoration: none;
     color: var(--accent-color);
 }
 
-.container .header-contacts{
+.container .header__contacts{
     margin-left:auto;
 }
 
@@ -218,7 +218,7 @@ li > .link-active, .link:hover, .header-menu a:focus{
 
 /* banner-text */
 
-.banner h1{
+.banner__title{
     color: #FFFFFF;
     font-size: 44px;
     font-weight: 900;
@@ -581,7 +581,7 @@ a {
     transform: scale(1.05);
 }
    
-.main-header {
+.main__header {
     font-size: 36px;
     font-weight: 700;
     color: var(--header-color);
@@ -789,17 +789,17 @@ color: var(--accent-color);
     text-transform: uppercase;
 }
 
-.icon{
+.header__icon, .clients__icon, .spacial__icon, .network__icon, .subscription__icon{
     fill: currentColor;
     display: block;
     align-self: center;
 }
 
-.header-contacts .icon {
+.header__contacts .header__icon, .spacial__icon, .network__icon {
  margin-right: 10px;
 }
 
-.header-email-contact, .header-phone {
+.header__email-contact, .header__phone {
     display: flex;
 }
 
@@ -830,7 +830,7 @@ color: var(--accent-color);
     margin-right: 10px;
 }
 
-.clients-link {
+.clients__link {
     display: block;
     padding: 16px 32px;
     height: 92px;
@@ -840,11 +840,11 @@ color: var(--accent-color);
     border-radius: 4px;
 }
 
-.clients-item:not(:last-child) {
+.clients__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.clients-link:hover, .clients-link:focus {
+.clients__link:hover, .clients__link:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
@@ -872,6 +872,9 @@ color: var(--accent-color);
     color: rgba(255, 255, 255, 0.6);
 }
 
+.subscription__input:focus {
+    outline: 1px solid var(--accent-color);
+}
 .button-icon {
     display: flex;
     justify-content: center;
@@ -879,7 +882,7 @@ color: var(--accent-color);
     
 }
 
-.button-icon .icon{
+.button-icon .header__icon, .spacial__icon, .network__icon{
     margin-left: 10px;
 }
 
@@ -963,7 +966,7 @@ color: var(--accent-color);
     margin-right: 7px;
 }
 
-/* chekbox-icon:checked!!!?? */
+/* chekbox-icon:checked */
 .form__checkbox--checkbox:checked + .form__checkbox--icon {
     border-color: transparent;
     background-color: var(--accent-color);
